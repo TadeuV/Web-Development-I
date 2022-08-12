@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Style</title>
+    <link
+    href="https://fonts.googleapis.com/css?family=Raleway"
+    rel="stylesheet"
+    crossorigin
+    />
+    <style>
+        #iddiv{
+            
+            margin: auto;
+            text-align: center;
+            box-sizing: border-box;
+            color: rgb(148, 148, 148);
+            font-weight:bold;
+        }
+        .btn{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: inline-block;
+            background-color: #49c1a2;
+            color: white;
+            width: 90%;
+            height: 40px;
+            border-radius: 5px;
+            
+        }
+        .label{
+            padding-left: 15px;
+            text-align: left;
+            display: block;
+            
+        }
+        .input{
+            width: 90%;
+            height: 30px;
+            border-radius: 4px;
+            border-width: 0.5px;
+            border-color: lightgray;
+            padding-bottom: 2px;
+        }
+        .header {
+            padding-top: 0px;
+            font-style: 'Raleway';
+            color: black;
+            text-align: center;
+            line-height: 1.0;
+        }
+
+        .footer{
+            padding:0px;
+            text-align: center;
+            color:white
+
+        }
+        .container{
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 500px;
+           
+        }
+        .body{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            font-family: Arial, sans-serif;
+            font-family: 'Raleway';
+            text-align: center;
+            line-height: 2.5;
+            background-color:hsl(219, 37%, 33%)
+        }
+        .form{
+            width: 370px;
+            margin: auto;
+            padding: 10px;
+            background-color: white;
+            
+        }
+        #footerid{
+            color:#49c1a2;
+        }
+     </style>
+</head>
+
+
+    <body class="body">
+        <div class="container">
+            <form class="form">
+                <header class="header">
+                    <h1 id="h1">Sign Up</h1>
+                    <p>It's free and only tales a minute</p>
+                </header>
+                <div id="iddiv">
+                    <label class="label">First Name</label>
+                    <input class="input" type="text" name="firstName" id="first-name" />
+                </div>
+                <div id="iddiv">
+                    <label class="label">Last Name</label>
+                    <input class="input" type="text" name="lastName" id="last-name" />
+                </div>
+                <div id="iddiv">
+                    <label class="label">Email</label>
+                    <input class="input" type="email" name="email" id="email" />
+                </div>
+                <div id="iddiv">
+                    <label class="label">Password</label>
+                    <input class="input" type="password" name="password" id="password" />
+                </div>
+                <div id="iddiv">
+                    <label class="label">Confirm Password</label> 
+                    <input class="input" type="password" name="conPassword" id="con-Password" />
+                </div>
+                <button type="submit" class="btn" style="font-size:100%;">Sign Up</button>
+                <p class="bottom-text" style="font-size:small;line-height: 0.2;">
+                    By clicking the Sign Up button, you agree to our
+                    <p style="font-size:small;">
+                        <a href="#">Terms & Conditions</a> and
+                        <a href="#">Privacy Policy</a>
+                    </p>
+                </p>
+
+            </form>
+        </div>
+        <footer class="footer">
+            <p>Already have an account? <a id="footerid" href="#">Login Here</a></p> 
+        </footer>
+    </body>    
+</html>
