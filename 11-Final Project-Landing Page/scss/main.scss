@@ -1,0 +1,612 @@
+$ff-primary: "Raleway", sans-serif;
+$ff-accent: "Aboreto", cursive;
+$color-black: #000;
+$color-white: #fff;
+$color-slate: #4f5050;
+$color-slatetrans: rgba(79, 80, 80, 0.801);
+$color-beige: #f3efe9;
+$color-champagne: #af967c;
+$color-green: #627776;
+$color-blue: #6c859f;
+$color-navy: rgba(42, 63, 89, 0.452);
+$color-testnavy: rgba(68, 58, 58, 0.452);
+$color-testred: #631a1a;
+$color-mint: #bfd1c9;
+$color-lilac: #d2c1d8;
+$color-slate-tint-10: #616262;
+$color-slate-tint-20: #727373;
+$color-slate-tint-30: #848585;
+$color-navy-tint-10: #3f526a;
+$color-navy-tint-20: #55657a;
+$color-navy-tint-30: #6a798b;
+$color-navy-tint-40: #7f8c9b;
+$color-navy-tint-50: #959fac;
+$color-navy-tint-60: #aab2bd;
+$color-green-tint-10: #728584;
+$color-green-tint-20: #819291;
+$color-green-tint-30: #91a09f;
+$color-lilac-tint-10: #d7c7dc;
+$color-lilac-tint-20: #dbcde0;
+$color-lilac-tint-30: #e0d4e4;
+$color-lilac-tint-40: #e4dae8;
+$color-lilac-tint-50: #e9e0ec;
+$color-lilac-tint-60: #ede6ef;
+$color-lilac-tint-70: #f2ecf3;
+$color-lilac-tint-80: #f6f3f7;
+$color-lilac-tint-90: #fbf9fb;
+$color-yellow-shade-10: #e6bc00;
+$color-yellow-shade-20: #cca700;
+$color-yellow-shade-30: #b39200;
+$color-yellow-shade-40: #997d00;
+$color-yellow-shade-50: #806900;
+$color-yellow-shade-60: #665400;
+$color-yellow-shade-70: #4c3f00;
+$color-yellow-shade-80: #332a00;
+$color-yellow-shade-90: #191500;
+$color-champagne-tint-10: #b7a189;
+$color-champagne-tint-20: #bfab96;
+$color-champagne-tint-30: #c7b6a3;
+$color-champagne-tint-40: #cfc0b0;
+$color-champagne-tint-50: #d7cbbe;
+$color-champagne-tint-60: #dfd5cb;
+$color-champagne-tint-70: #e7e0d8;
+$color-champagne-tint-80: #efeae5;
+$color-champagne-tint-90: #f7f5f2;
+$color-logo: #00ffea;
+$btn-logo: #e3fffd;
+$color-logov: #ff5100;
+
+:root{
+    box-sizing: border-box
+}
+
+body {
+  background-color: $color-navy-tint-10;
+  padding: 0;
+  margin: 0;
+  font-family: $ff-primary;
+}
+
+.heropg {
+  background-image: url("/imgs/hero.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 6.6% 1fr;
+  grid-template-areas:
+    "nav nav"
+    "img prom";
+
+  .nav-bar {
+    background-color: $color-slatetrans;
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    .brand {
+      align-self: center;
+      display: block;
+      width: 11em;
+      height: 3.5em;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 11px;
+      }
+    }
+  }
+  .prombox {
+    grid-area: prom;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+
+    .textbox {
+      width: 100%;
+      background-color: rgba(230, 227, 227, 0.877);
+      height: 80%;
+      font-size: 1.4em;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .price {
+        font-size: 1.3em;
+        font-weight: bold;
+        line-height: 1.5em;
+        padding: 0.5em;
+        max-height: 60%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .disc {
+          font-size: 2.3em;
+          text-shadow: 2px 2px 1px red;
+        }
+      }
+
+      .text {
+        color: #ff0000;
+        font-weight: bolder;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+    .email {
+      color: $color-white;
+      font-size: 1.2em;
+      background-color: $color-testred;
+      width: 100%;
+      height: 10em;
+      align-self: center;
+      border-bottom-left-radius: 30px;
+      border-top-right-radius: 30px;
+      .mes {
+        padding: 1px;
+      }
+      input {
+        width: 70%;
+        // margin-right: 10%;
+        font-size: large;
+        margin: auto;
+      }
+      .submit {
+        width: 7em;
+        height: 2em;
+        font-size: 1em;
+        border: none;
+        margin-top: 10px;
+
+        &:hover {
+          box-shadow: 1px 1px 5px $color-logo, 1px 1px 5px $color-logo inset;
+        }
+      }
+    }
+    button {
+      border: 1px solid red;
+      background: $btn-logo;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 9em;
+      height: 2em;
+      font-family: $ff-accent;
+      font-size: 1.2em;
+      font-weight: bold;
+      align-self: center;
+
+      &:active {
+        transform: scale(0.96);
+      }
+    }
+    span:hover {
+      color: red;
+    }
+    .prom:hover {
+      box-shadow: 2px 2px 5px red, 2px 2px 5px red inset;
+    }
+  }
+
+  .imagebox {
+    grid-area: img;
+    // display: block;
+    // background: url("imgs/w1.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center center;
+  }
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  .designbox {
+    padding-bottom: 4em;
+    width: 90%;
+    background-color: white;
+    display: grid;
+    align-self: center;
+    justify-content: space-around;
+    grid-template-columns: 26% 32% 32%;
+    grid-template-rows: 40vh;
+    grid-template-areas:
+      "desc pic pic"
+      "desc pic pic"
+      "desc pic pic"
+      "desc pic pic";
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+
+      &:active {
+        transform: scale(2);
+      }
+    }
+
+    .desc {
+      grid-area: desc;
+      background-color: white;
+      font-size: 1.2em;
+      line-height: 1.2em;
+      padding: 1em;
+      margin-top: 2em;
+      text-align: justify;
+
+      .cardbox {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .cardpic {
+          padding-top: 1em;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+
+          & img {
+            width: 240px;
+            height: 220px;
+            display: block;
+            align-self: center;
+          }
+        }
+      }
+    }
+    .picbox {
+      // background-color:$color-green;
+      grid-area: pic;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      // grid-template-columns: 1fr 1fr;
+      // grid-template-rows: auto;
+
+      .prodpic {
+        align-items: center;
+        width: 48%;
+        height: 500px;
+        margin-top: 2%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .akazonae {
+    background-image: url("/imgs/bg1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    font-size: 2em;
+    line-height: 1.4em;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+    .aka{
+        padding-left: 10%;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 1.1em;
+  color: white;
+}
+
+// Responsiviness
+
+@media (max-width: 1600px) {
+  body {
+    font-size: 0.9em;
+  }
+
+  .heropg {
+    background-position: center center;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 6% 1fr;
+
+    button {
+      font-size: 0.8em;
+      width: 7.5em;
+      height: 1.6em;
+    }
+
+    .email {
+      padding-bottom: 1em;
+    }
+  }
+}
+@media (max-width: 1300px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  .heropg {
+    grid-template-columns: 70% 30%;
+    height: 80vh;
+    max-width: 100%;
+
+    .prombox {
+        
+      .brand {
+        width: 9.5em;
+        height: 3em;
+        &img {
+          width: 100%;
+          height: 100%;
+          border-radius: 1px;
+        }
+      }
+    }
+    button {
+      width: 6.5em;
+      height: 1.4em;
+      font-size: 0.7em;
+    }
+
+    .email {
+      padding-bottom: 1em;
+    }
+    .imagebox {
+        
+    }
+  }
+
+  .details {
+    .designbox {
+      grid-template-columns: 26% 32% 32%;
+      grid-template-rows: 40vh;
+      padding-bottom: 0;
+      .desc {
+        padding: 0.5em;
+        margin-top: 0;
+        line-height: 1.1em;
+        .cardbox {
+          display: grid;
+          grid-template-columns: 1fr;
+
+          .cardpic {
+            display: flex;
+            flex-direction: column;
+
+            & img {
+              width: 200px;
+              height: 190px;
+            }
+          }
+        }
+      }
+
+      .picbox {
+        .prodpic {
+          margin-top: 1%;
+          height: 350px;
+        }
+      }
+    }
+
+    .akazonae {
+      background-position: right;
+      height: 80vh;
+   
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .heropg {
+    background-image: none;
+    background-position: right;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 6% 1fr;
+    background-color: rgba(238, 238, 238, 0.87);
+    .imagebox {
+      background-image: url("/imgs/hero.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .details{
+    .designbox{
+
+        .desc{
+            font-size: 1.2em;
+
+            .cardbox {
+                display: grid;
+                grid-template-columns: 1fr;
+      
+                .cardpic {
+                  display: flex;
+                  flex-direction: column;
+      
+                  & img {
+                    width: 180px;
+                    height: 150px;
+                  }
+                  
+                }
+              }
+        }
+        .picbox{
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .prodpic{
+                max-height: 500px;
+            }
+        }
+    }
+  }
+}
+
+@media (max-width:950px) {
+
+
+    .details{
+        .designbox{
+            padding-left: 10px;
+            padding-right: 10px;
+            grid-template-columns: 45% 55%;
+            grid-template-rows: 40vh;
+            grid-template-areas:
+              "desc pic"
+              "desc pic";
+
+            .desc{
+                font-size: 1.2em;
+                line-height: 1.2em;
+    
+                .cardbox {
+                    display: grid;
+                    grid-template-columns: 1fr;
+          
+                    .cardpic {
+                      display: flex;
+                      flex-direction: column;
+          
+                      & img {
+                        width: 220px;
+                        height: 200px;
+                        }
+                      
+                    }
+                }
+            }
+            .picbox{
+                flex-wrap: nowrap;
+                flex-direction: column;
+                justify-items: center;
+                padding-bottom: 2em;
+                .prodpic{
+                    width: 100%;
+                    // height: 500px;
+                    // margin-top: 2%;
+                }
+            }
+        }
+        .akazonae{
+            .aka{
+                padding-left: 5%;
+                max-width: 250px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width:770px) {
+    
+    body{
+        font-size: 0.7em;
+    }
+    .details{
+        .designbox{
+            padding-left: 5px;
+            padding-right: 5px;
+            grid-template-columns: 45% 55%;
+            grid-template-rows: 10vh;
+            grid-template-areas:
+              "desc pic"
+              "desc pic";
+
+            .desc{
+            
+    
+                .cardbox {
+                   
+          
+                    .cardpic {
+                    
+          
+                      & img {
+                        width: 180px;
+                        height: 160px;
+                        }
+                      
+                    }
+                }
+            }
+            .picbox{
+              
+                .prodpic{
+                    
+                }
+            }
+        }
+        .akazonae{
+            justify-content: right;
+            .aka{
+                font-size: 0.9em;
+                padding-right: 2%;
+                max-width: 220px;
+                text-align: right;
+                
+            }
+        }
+    }
+}
+
+@media (max-width:650px) {
+    body{
+        font-size: 0.8em;
+    }
+
+    .heropg{
+        .prombox{
+            font-size: 0.8em;
+            button{
+                font-size: 1em;
+            }
+            .textbox{
+                height: 70%;
+            }
+            .email{
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                input{
+                    font-size: small;
+                }
+                .mes{
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+    .details{
+        .designbox{
+            display: flex;
+            flex-direction: column;
+            .desc{
+
+                .cardbox{
+                    padding-top: 1%;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    justify-items: center;
+                    .cardpic{
+                        max-width: 210px;
+                        & img {
+                            width: 210px;
+                            height: 180px;
+                            }
+                    }
+                }
+            }
+        }
+    }
+}

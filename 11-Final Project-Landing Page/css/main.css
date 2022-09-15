@@ -1,0 +1,441 @@
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3f526a;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.heropg {
+  background-image: url("/imgs/hero.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 6.6% 1fr;
+  grid-template-areas: "nav nav" "img prom";
+}
+.heropg .nav-bar {
+  background-color: rgba(79, 80, 80, 0.801);
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+}
+.heropg .nav-bar .brand {
+  align-self: center;
+  display: block;
+  width: 11em;
+  height: 3.5em;
+  overflow: hidden;
+}
+.heropg .nav-bar .brand img {
+  width: 100%;
+  height: 100%;
+  border-radius: 11px;
+}
+.heropg .prombox {
+  grid-area: prom;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.heropg .prombox .textbox {
+  width: 100%;
+  background-color: rgba(230, 227, 227, 0.877);
+  height: 80%;
+  font-size: 1.4em;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.heropg .prombox .textbox .price {
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 0.5em;
+  max-height: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.heropg .prombox .textbox .price .disc {
+  font-size: 2.3em;
+  text-shadow: 2px 2px 1px red;
+}
+.heropg .prombox .textbox .text {
+  color: #ff0000;
+  font-weight: bolder;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.heropg .prombox .email {
+  color: #fff;
+  font-size: 1.2em;
+  background-color: #631a1a;
+  width: 100%;
+  height: 10em;
+  align-self: center;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.heropg .prombox .email .mes {
+  padding: 1px;
+}
+.heropg .prombox .email input {
+  width: 70%;
+  font-size: large;
+  margin: auto;
+}
+.heropg .prombox .email .submit {
+  width: 7em;
+  height: 2em;
+  font-size: 1em;
+  border: none;
+  margin-top: 10px;
+}
+.heropg .prombox .email .submit:hover {
+  box-shadow: 1px 1px 5px #00ffea, 1px 1px 5px #00ffea inset;
+}
+.heropg .prombox button {
+  border: 1px solid red;
+  background: #e3fffd;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 9em;
+  height: 2em;
+  font-family: "Aboreto", cursive;
+  font-size: 1.2em;
+  font-weight: bold;
+  align-self: center;
+}
+.heropg .prombox button:active {
+  transform: scale(0.96);
+}
+.heropg .prombox span:hover {
+  color: red;
+}
+.heropg .prombox .prom:hover {
+  box-shadow: 2px 2px 5px red, 2px 2px 5px red inset;
+}
+.heropg .imagebox {
+  grid-area: img;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+.details .designbox {
+  padding-bottom: 4em;
+  width: 90%;
+  background-color: white;
+  display: grid;
+  align-self: center;
+  justify-content: space-around;
+  grid-template-columns: 26% 32% 32%;
+  grid-template-rows: 40vh;
+  grid-template-areas: "desc pic pic" "desc pic pic" "desc pic pic" "desc pic pic";
+}
+.details .designbox img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.details .designbox img:active {
+  transform: scale(2);
+}
+.details .designbox .desc {
+  grid-area: desc;
+  background-color: white;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding: 1em;
+  margin-top: 2em;
+  text-align: justify;
+}
+.details .designbox .desc .cardbox {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.details .designbox .desc .cardbox .cardpic {
+  padding-top: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.details .designbox .desc .cardbox .cardpic img {
+  width: 240px;
+  height: 220px;
+  display: block;
+  align-self: center;
+}
+.details .designbox .picbox {
+  grid-area: pic;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.details .designbox .picbox .prodpic {
+  align-items: center;
+  width: 48%;
+  height: 500px;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+.details .akazonae {
+  background-image: url("/imgs/bg1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  font-size: 2em;
+  line-height: 1.4em;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+}
+.details .akazonae .aka {
+  padding-left: 10%;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.1em;
+  color: white;
+}
+
+@media (max-width: 1600px) {
+  body {
+    font-size: 0.9em;
+  }
+  .heropg {
+    background-position: center center;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 6% 1fr;
+  }
+  .heropg button {
+    font-size: 0.8em;
+    width: 7.5em;
+    height: 1.6em;
+  }
+  .heropg .email {
+    padding-bottom: 1em;
+  }
+}
+@media (max-width: 1300px) {
+  body {
+    font-size: 0.8em;
+  }
+  .heropg {
+    grid-template-columns: 70% 30%;
+    height: 80vh;
+    max-width: 100%;
+  }
+  .heropg .prombox .brand {
+    width: 9.5em;
+    height: 3em;
+  }
+  .heropg .prombox .brandimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 1px;
+  }
+  .heropg button {
+    width: 6.5em;
+    height: 1.4em;
+    font-size: 0.7em;
+  }
+  .heropg .email {
+    padding-bottom: 1em;
+  }
+  .details .designbox {
+    grid-template-columns: 26% 32% 32%;
+    grid-template-rows: 40vh;
+    padding-bottom: 0;
+  }
+  .details .designbox .desc {
+    padding: 0.5em;
+    margin-top: 0;
+    line-height: 1.1em;
+  }
+  .details .designbox .desc .cardbox {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .details .designbox .desc .cardbox .cardpic {
+    display: flex;
+    flex-direction: column;
+  }
+  .details .designbox .desc .cardbox .cardpic img {
+    width: 200px;
+    height: 190px;
+  }
+  .details .designbox .picbox .prodpic {
+    margin-top: 1%;
+    height: 350px;
+  }
+  .details .akazonae {
+    background-position: right;
+    height: 80vh;
+  }
+}
+@media (max-width: 1100px) {
+  .heropg {
+    background-image: none;
+    background-position: right;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 6% 1fr;
+    background-color: rgba(238, 238, 238, 0.87);
+  }
+  .heropg .imagebox {
+    background-image: url("/imgs/hero.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+  .details .designbox .desc {
+    font-size: 1.2em;
+  }
+  .details .designbox .desc .cardbox {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .details .designbox .desc .cardbox .cardpic {
+    display: flex;
+    flex-direction: column;
+  }
+  .details .designbox .desc .cardbox .cardpic img {
+    width: 180px;
+    height: 150px;
+  }
+  .details .designbox .picbox {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .details .designbox .picbox .prodpic {
+    max-height: 500px;
+  }
+}
+@media (max-width: 950px) {
+  .details .designbox {
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 40vh;
+    grid-template-areas: "desc pic" "desc pic";
+  }
+  .details .designbox .desc {
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+  .details .designbox .desc .cardbox {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .details .designbox .desc .cardbox .cardpic {
+    display: flex;
+    flex-direction: column;
+  }
+  .details .designbox .desc .cardbox .cardpic img {
+    width: 220px;
+    height: 200px;
+  }
+  .details .designbox .picbox {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-items: center;
+    padding-bottom: 2em;
+  }
+  .details .designbox .picbox .prodpic {
+    width: 100%;
+  }
+  .details .akazonae .aka {
+    padding-left: 5%;
+    max-width: 250px;
+  }
+}
+@media (max-width: 770px) {
+  body {
+    font-size: 0.7em;
+  }
+  .details .designbox {
+    padding-left: 5px;
+    padding-right: 5px;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 10vh;
+    grid-template-areas: "desc pic" "desc pic";
+  }
+  .details .designbox .desc .cardbox .cardpic img {
+    width: 180px;
+    height: 160px;
+  }
+  .details .akazonae {
+    justify-content: right;
+  }
+  .details .akazonae .aka {
+    font-size: 0.9em;
+    padding-right: 2%;
+    max-width: 220px;
+    text-align: right;
+  }
+}
+@media (max-width: 650px) {
+  body {
+    font-size: 0.8em;
+  }
+  .heropg .prombox {
+    font-size: 0.8em;
+  }
+  .heropg .prombox button {
+    font-size: 1em;
+  }
+  .heropg .prombox .textbox {
+    height: 70%;
+  }
+  .heropg .prombox .email {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .heropg .prombox .email input {
+    font-size: small;
+  }
+  .heropg .prombox .email .mes {
+    font-size: 1.1em;
+  }
+  .details .designbox {
+    display: flex;
+    flex-direction: column;
+  }
+  .details .designbox .desc .cardbox {
+    padding-top: 1%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+  .details .designbox .desc .cardbox .cardpic {
+    max-width: 210px;
+  }
+  .details .designbox .desc .cardbox .cardpic img {
+    width: 210px;
+    height: 180px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
