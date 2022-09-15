@@ -610,3 +610,39 @@ footer {
         }
     }
 }
+
+@media (max-width:570px) {
+    .heropg{
+        grid-template-columns: 1fr;
+        grid-template-rows: 6.6% 1fr 1fr;
+        grid-template-areas:
+            "nav"
+            "img"
+            "prom";
+        // .imagebox{
+
+        // }
+        // .prombox{
+        //     font-size: 0.8em;
+        //     button{
+        //         font-size: 1em;
+        //     }
+        //     .textbox{
+        //         height: 70%;
+        //     }
+        //     .email{
+        //         height: 30%;
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: space-evenly;
+        //         input{
+        //             font-size: small;
+        //         }
+        //         .mes{
+        //             font-size: 1.1em;
+        //         }
+        //     }
+        // }
+    }
+
+}
